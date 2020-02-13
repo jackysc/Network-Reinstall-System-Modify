@@ -53,7 +53,7 @@ then
 	echo -e "\033[33m You have chosen to install the latest Debian_9 \033[0m"
 	echo -e "\n"
 	sleep 2s
-	wget --no-check-certificate -qO Core_Install.sh https://raw.githubusercontent.com/jackysc/Network-Reinstall-System-Modify/master/CoreShell/Core_Install.sh' && bash Core_Install.sh -d 9 -v 64 -a
+	wget --no-check-certificate -qO Core_Install.sh 'https://raw.githubusercontent.com/jackysc/Network-Reinstall-System-Modify/master/CoreShell/Core_Install.sh' && bash Core_Install.sh -d 9 -v 64 -a
 fi
 
 if [ $1 = '-Debian_8' ]
