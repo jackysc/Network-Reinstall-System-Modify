@@ -36,7 +36,32 @@ if [ $1 = '-CentOS_7' ]
 then
 	echo -e "\033[33m You have chosen to install the latest CentOS_7 \033[0m"
 	echo -e "\n"
+		sleep 2s
+	wget --no-check-certificate -qO Core_Install.sh 'https://raw.githubusercontent.com/jackysc/Network-Reinstall-System-Modify/master/CoreShell/Core_Install.sh' && bash Core_Install.sh -dd 'https://odc.mirrors.getcdn.net/Operating-System_VvuH8KEgcrS0HtzN/CentOS/CentOS_7.X_NetInstallation.vhd.gz'
+fi
+
+if [ $1 = '-CentOS_6' ]
+then
+	echo -e "\033[33m You have chosen to install the latest CentOS_6 \033[0m"
+	echo -e "\n"
 	sleep 2s
+	wget --no-check-certificate -qO Core_Install.sh 'https://raw.githubusercontent.com/jackysc/Network-Reinstall-System-Modify/master/CoreShell/Core_Install.sh' && bash Core_Install.sh -c 6.10 -v 64 -a
+fi
+
+if [ $1 = '-Debian_9' ]
+then
+	echo -e "\033[33m You have chosen to install the latest Debian_9 \033[0m"
+	echo -e "\n"
+	sleep 2s
+	wget --no-check-certificate -qO Core_Install.sh https://raw.githubusercontent.com/jackysc/Network-Reinstall-System-Modify/master/CoreShell/Core_Install.sh' && bash Core_Install.sh -d 9 -v 64 -a
+fi
+
+if [ $1 = '-Debian_8' ]
+then
+	echo -e "\033[33m You have chosen to install the latest Debian_8 \033[0m"
+	echo -e "\n"
+	sleep 2s
+	
 	wget --no-check-certificate -qO Core_Install.sh 'https://raw.githubusercontent.com/jackysc/Network-Reinstall-System-Modify/master/CoreShell/Core_Install.sh' && bash Core_Install.sh -d 8 -v 64 -a
 fi
 
