@@ -203,7 +203,7 @@ function SelectMirror(){
       CurMirror="${MirrorBackup[$mirror]}"
       [ -n "$CurMirror" ] || continue
       MirrorURL=`echo "$MirrorTEMP" |sed "s#SUB_MIRROR#${CurMirror}#g"`
-      wget --no-check-certificate --spider --timeout=3 -o /dev/null "$MirrorURL"
+      wget --no-check-certificate --spider --timeout=30 -o /dev/null "$MirrorURL"
       [ $? -eq 0 ] && MirrorStatus=1 && break
     done
   [ $MirrorStatus -eq 1 ] && echo "$CurMirror" || exit 1
